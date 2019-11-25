@@ -9,6 +9,7 @@ public class CubeMover : MonoBehaviour
 {
     [SerializeField]
     private float speed = 1;
+    private float MINIMUM_HORIZONTAL = 0;
 
     // Update is called once per frame
     void Update()
