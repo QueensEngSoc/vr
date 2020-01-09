@@ -7,16 +7,26 @@ using UnityEngine;
 
 public class Bomb : MonoBehaviour
 {
+    private GameScript script;
+
+    private void Start()
+    {
+        print("Starting Bomb routine");
+        script = GetComponent<GameScript>();
+    }
     private void OnEnable()
     {
+        print("enabling bomb");
         Respawn();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y < -5)
+        if (transform.position.y < -5) {
             Respawn();
+            script.updateScore();
+        }
 
     }
 

@@ -65,7 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Bomb.cs" />
     <Compile Include="Assets\CubeMover.cs" />
-    <Compile Include="Assets\NewBehaviourScript.cs" />
+    <Compile Include="Assets\GameScript.cs" />
     <Compile Include="Assets\Starfield Skybox\Demo\Script\LookCamera.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>H:/Development/essdev-vr/getting to know unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

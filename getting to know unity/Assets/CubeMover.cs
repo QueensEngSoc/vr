@@ -2,11 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //https://www.youtube.com/watch?v=XDAYS-qYe6Y
 
 public class CubeMover : MonoBehaviour
 {
+    public GameScript script;
+
+    private void Start()
+    {
+        // initialize a GameScript instance;    
+    }
+
     [SerializeField]
     private float speed = 1;
     private float MINIMUM_HORIZONTAL = 0;
