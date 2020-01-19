@@ -12,7 +12,7 @@ public class GameScript : MonoBehaviour
     private GameObject uiCanvas = null;
 
     private GameScript scoreScript;
-    private int lives = 2;
+    private int lives = 3;
     private List<GameObject> liveImages = new List<GameObject>();
     private Sprite heartImage = null;
 
@@ -23,7 +23,7 @@ public class GameScript : MonoBehaviour
         livesGameObject = GameObject.Find("HeartImage");
         uiCanvas = GameObject.Find("Canvas");
 
-        heartImage = Resources.Load("Sprites/3d-heart") as Sprite;
+        heartImage = Resources.Load<Sprite>("Sprites/heart");
 
         //Get script from it
         scoreScript = scoreGameObject.GetComponent<GameScript>();
@@ -54,7 +54,7 @@ public class GameScript : MonoBehaviour
             Debug.Log("width " + rectTransform.rect.width + "height " + rectTransform.rect.height);
 
             go.transform.SetParent(rectTransform, false);
-            go.GetComponent<RectTransform>().anchoredPosition = new Vector3(30 * i - 50, -25, 0);
+            go.GetComponent<RectTransform>().anchoredPosition = new Vector3(30 * -i - 25, -25, 0);
 
         }
 
@@ -89,7 +89,6 @@ public class GameScript : MonoBehaviour
         GameObject imageToRemove = liveImages[liveImages.Count - 1];
         Destroy(imageToRemove);
         liveImages.RemoveAt(liveImages.Count - 1);
-
     }
 
 }
