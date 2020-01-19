@@ -8,11 +8,17 @@ using UnityEngine;
 public class Bomb : MonoBehaviour
 {
     private GameScript script;
+    private GameObject scoreGameObject = null;
+    private ScoreText scoreText;
+    private GameScript scoreScript;
 
     private void Start()
     {
         print("Starting Bomb routine");
         script = GetComponent<GameScript>();
+        scoreGameObject = GameObject.Find("Canvas");
+        //Get script from it
+        scoreScript = scoreGameObject.GetComponent<GameScript>();
     }
     private void OnEnable()
     {
@@ -25,7 +31,8 @@ public class Bomb : MonoBehaviour
     {
         if (transform.position.y < -5) {
             Respawn();
-            script.updateScore();
+            //script.updateScore();
+            scoreScript.updateScore(1);
         }
 
     }
@@ -33,7 +40,7 @@ public class Bomb : MonoBehaviour
     private void Respawn()
     {
         float randomX = UnityEngine.Random.Range(-15, 15);
-        float randomY = UnityEngine.Random.Range(10, 20);
+        float randomY = UnityEngine.Random.Range(10, 25);
 
         transform.position = new Vector3(randomX, randomY);
 
