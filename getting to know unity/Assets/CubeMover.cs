@@ -9,10 +9,16 @@ using UnityEngine.UI;
 public class CubeMover : MonoBehaviour
 {
     public GameScript script;
+    private GameObject gameCanvas = null;
+    private GameScript gameScript = null;
 
     private void Start()
     {
         // initialize a GameScript instance;    
+        script = GetComponent<GameScript>();
+        gameCanvas = GameObject.Find("Canvas");
+        //Get script from it
+        gameScript = gameCanvas.GetComponent<GameScript>();
     }
 
     [SerializeField]
@@ -32,6 +38,7 @@ public class CubeMover : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        gameScript.loseALife();
     }
 }
