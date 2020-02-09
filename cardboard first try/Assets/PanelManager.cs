@@ -23,14 +23,6 @@ public class PanelManager : MonoBehaviour
         currentPanel.Show();
     }
 
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            GoToPrevious();
-        }
-    }
-
     public void GoToPrevious()
     {
         if (panelHistory.Count == 0)
