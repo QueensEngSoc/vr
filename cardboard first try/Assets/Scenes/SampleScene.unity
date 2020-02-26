@@ -611,10 +611,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceMult: 5
-  ball: {fileID: 1873910786}
+  ball: {fileID: 386564494}
   ballArr:
-  - {fileID: 1873910786}
-  - {fileID: 1873910786}
+  - {fileID: 386564494}
+  - {fileID: 386564494}
+  currBall: 0
 --- !u!135 &386564497
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -683,7 +684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386564494}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3, y: 1, z: 10}
+  m_LocalPosition: {x: 2, y: 1, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1820,12 +1821,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1873910786 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4138958930023234580, guid: 3993ff66d1a52c846a5a616e53cf066f,
-    type: 3}
-  m_PrefabInstance: {fileID: 4138958930431090710}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2062491608
 PrefabInstance:
   m_ObjectHideFlags: 0
